@@ -1,7 +1,7 @@
 <template>
     <panel-item :field="field">
         <template slot="value">
-            <iframe v-if="showIframe" :width="width" :height="height" :class="classes" :style="style" :srcdoc="field.value"></iframe>
+            <iframe v-if="showIframe" :width="width" :height="height" :class="classes" :style="style" :srcdoc="(!field.url ? field.value : false)" :src="(field.url ? field.value : false)"></iframe>
             <p v-else>—</p>
         </template>
     </panel-item>

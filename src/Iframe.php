@@ -75,4 +75,16 @@ class Iframe extends Field
         return $this->withMeta(['style'=>$style]);
     }
 
+    /**
+     * Show url (src) rather than default setup which shows HTML contents (srcdoc).
+     *
+     * @param string $url
+     *
+     * @return $this
+     */
+    public function url(string $url): self
+    {
+        return $this->withMeta(['url'=>$url]);
+    }
+
 }
